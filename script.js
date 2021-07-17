@@ -26,9 +26,11 @@ class Player{
     }
     hold(){
         this.changeScore(this.score+this.currentScore);
-        if(this.score >= 10)
+        if(this.score >= 100)
         {
-            console.log("player " +  turn + "wins");
+            win();
+            endGame();
+            return;
         }
         this.switchTurn();
     }
@@ -85,11 +87,10 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
 // ##########  GAME FUNCTIONS ###############
-function newGame(){
+function startGame(){
     player1.newGame();
     player2.newGame();
 }
-
 function roll(){
     if (turn == 1)
         player1.roll();
@@ -126,10 +127,31 @@ function showDice(number){
     }
 }
 function win(){
-    
+    document.getElementById("player-win").innerHTML = "PLAYER " +turn + " WINS";
 }
 function endGame(){
-    document.getElementById('roll-btn').disabled = true;
+    let rollBtn = document.getElementById('roll-btn');
+    rollBtn.disabled = true;
+    rollBtn.classList.remove("btn-grad-hover");
+    let holdBtn = document.getElementById('hold-btn');
+    holdBtn.disabled = true;
+    holdBtn.classList.remove("btn-grad-hover");
+
+
+}
+function newGame(){
+    document.getElementById("player-win").innerHTML = "";
+    let rollBtn = document.getElementById('roll-btn');
+    rollBtn.disabled = false;
+    rollBtn.classList.add("btn-grad-hover");
+    let holdBtn = document.getElementById('hold-btn');
+    holdBtn.disabled = false;
+    holdBtn.classList.add("btn-grad-hover");
+    turn = 1;
+    panel[0].classList.remove("fade");
+    panel[1].classList.add("fade");
+    diceImage.src = "";
+    startGame();
 }
 // ########## CALLING FUNCTIONS ###########
-newGame();
+startGame();

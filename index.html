@@ -10,13 +10,14 @@
 </head>
 
 <body>
+    <p id="player-win"></p>
     <div class="game-area ">
-        <button class="new-game btn-grad" id="new-game-btn">New Game</button>
+        <button class="new-game btn-grad btn-grad-hover" id="new-game-btn" onclick="newGame();">New Game</button>
         <div class="dice">
             <img src="" alt="" id="dice-image">
         </div>
-        <button id="roll-btn" class="roll btn-grad" onclick="roll();">Roll Dice</button>
-        <button class="hold btn-grad" id="hold-btn" onclick="hold();">Hold</button>
+        <button id="roll-btn" class="roll btn-grad btn-grad-hover" onclick="roll();">Roll Dice</button>
+        <button class="hold btn-grad btn-grad-hover" id="hold-btn" onclick="hold();">Hold</button>
         <div class="panel left-panel ">
             <p class="player">PLAYER 1</p>
             <p class="score">0</p>

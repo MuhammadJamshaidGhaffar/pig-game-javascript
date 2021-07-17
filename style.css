@@ -88,12 +88,14 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
    border: none;
  }
 
- .btn-grad:hover {
+ .btn-grad-hover:hover {
    background-position: right center; /* change the direction of the change here */
    color: #fff;
    text-decoration: none;
  }
-
+.btn-grad-hover:active{
+    transform: translateY(1rem);
+}
  .new-game{
      
  }
@@ -110,4 +112,13 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
     top: 28%;
     left: 46%;
     z-index: 1;
+ }
+
+ #player-win {
+    font-size: 5rem;
+    font-weight: 900;
+    color: yellow;
+    position: absolute;
+    top: 0;
+    left: 32%;
  }
