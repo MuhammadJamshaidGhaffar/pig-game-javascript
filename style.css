@@ -11,8 +11,12 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
 }
 /* ####### utility classes ############  */
 .fade{
-    background: linear-gradient(rgba(26, 25, 25, 0.226) ,rgba(26, 25, 25, 0.226));
-    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.685);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 
 }
 
@@ -34,6 +38,7 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
 .panel{
     width: 50%;
     text-align: center;
+    position: relative;
 }
 
 .left-panel{

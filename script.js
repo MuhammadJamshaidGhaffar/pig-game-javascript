@@ -70,7 +70,7 @@ let player2 = undefined;
 
 let turn = 1 ;
 let diceImage = document.getElementById('dice-image');
-let panel = document.querySelectorAll(".panel");
+let panel = document.querySelectorAll(".mask");
 
 // ########## initializing global variables #############
 {
