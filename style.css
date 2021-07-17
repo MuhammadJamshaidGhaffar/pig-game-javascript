@@ -105,3 +105,9 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
     top:70%;
     left:44%;
  }
+ .dice{
+     position: absolute;
+    top: 28%;
+    left: 46%;
+    z-index: 1;
+ }
