@@ -138,7 +138,8 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
 .game-area{
 
     width: 100%;
-    height: 40rem;
+    max-height: 40rem;
+    height: 100%;
     
 }
 
@@ -158,8 +159,7 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
 .btn-grad{
     padding:1rem 1rem;
 }
-.dice{
-    transform: translateX(-1.5rem);
+#dice-image{
     width: 5rem;
 }
 }
@@ -170,6 +170,10 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
 }
 }
 @media (max-width:460px) {
+    #player-win {
+        font-size: 3.3rem;
+        left: 11rem;
+    }
     .left-panel .current-score-panel{
         transform: translate(-2rem,-2rem);
     }
@@ -182,21 +186,26 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
         transform: translateX(-1.5rem);
     }
     .dice{
-        transform: translateX(-1.5rem);
+        transform: translateX(-0.7rem);
     }
 }
 @media (max-width:390px) {
+    #player-win {
+        left: 5rem;
+    }
     .btn-grad{
         transform: translateX(-1.5rem);
     }
-    .dice{
-        transform: translateX(-1.5rem);
+    #dice-image{
         width: 4rem;
     }
 }
 
 @media (max-width:366px)
 {
+    #player-win {
+        left: 4rem;
+    }
     .current-score-panel{
         height: 8rem;
     }
@@ -208,3 +217,8 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
         font-size: 3rem;
     }
 }
+@media (max-width:290px)
+{
+    #player-win {
+        font-size: 2.7rem;
+    }
