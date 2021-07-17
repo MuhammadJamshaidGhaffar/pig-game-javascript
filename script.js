@@ -26,7 +26,7 @@ class Player{
     }
     hold(){
         this.changeScore(this.score+this.currentScore);
-        if(this.score >= 10)
+        if(this.score >= 100)
         {
             win();
             endGame();
