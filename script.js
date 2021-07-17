@@ -26,7 +26,7 @@ class Player{
     }
     hold(){
         this.changeScore(this.score+this.currentScore);
-        if(this.score >= 100)
+        if(this.score >= 10)
         {
             win();
             endGame();
@@ -128,6 +128,7 @@ function showDice(number){
 }
 function win(){
     document.getElementById("player-win").innerHTML = "PLAYER " +turn + " WINS";
+    diceImage.src="";
 }
 function endGame(){
     let rollBtn = document.getElementById('roll-btn');

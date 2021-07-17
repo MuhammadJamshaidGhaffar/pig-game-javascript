@@ -1,6 +1,7 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    --red : rgb(221, 11, 11);
 }
 
 body{
@@ -117,8 +118,88 @@ background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, F
  #player-win {
     font-size: 5rem;
     font-weight: 900;
-    color: yellow;
+    color: deeppink;
     position: absolute;
     top: 0;
     left: 32%;
+    z-index: 5;
+    top: 1rem;
+    left: 15rem;
  }
+
+ /* ############### media quries #################  */
+ @media (max-width:706px){
+     
+.game-area{
+
+    width: 100%;
+    height: 40rem;
+    
+}
+
+#player-win {
+    font-size: 4rem;
+    top:4rem;
+    
+ }
+ 
+ }
+ @media (max-width:560px){
+     
+#player-win {
+    font-size: 3.5rem;
+    left:13rem;
+}
+.btn-grad{
+    padding:1rem 1rem;
+}
+.dice{
+    transform: translateX(-1.5rem);
+    width: 5rem;
+}
+}
+@media (max-width:508px){
+     
+#new-game-btn{
+   top:-14%; 
+}
+}
+@media (max-width:460px) {
+    .left-panel .current-score-panel{
+        transform: translate(-2rem,-2rem);
+    }
+   .right-panel .current-score-panel{
+    transform: translate(2rem,-2rem);
+   }
+}
+@media (max-width:427px) {
+    .btn-grad{
+        transform: translateX(-1.5rem);
+    }
+    .dice{
+        transform: translateX(-1.5rem);
+    }
+}
+@media (max-width:390px) {
+    .btn-grad{
+        transform: translateX(-1.5rem);
+    }
+    .dice{
+        transform: translateX(-1.5rem);
+        width: 4rem;
+    }
+}
+
+@media (max-width:366px)
+{
+    .current-score-panel{
+        height: 8rem;
+    }
+    .current-score-panel .text{
+        font-size: 1.6rem;
+        font-weight: 900;
+    }
+    .current-score{
+        font-size: 3rem;
+    }
+}
